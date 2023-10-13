@@ -192,3 +192,21 @@ p {
         pointer-events: auto;
     }
 }
+
+
+/* ****CONTENIDOS */
+
+.contenido {
+    margin: 20px;
+    border: 2px solid #000;
+    height: 80vh;
+    position: relative;
+}
+
+.contenido h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: italic;
+}
