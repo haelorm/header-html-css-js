@@ -120,6 +120,7 @@ p {
     padding: 1rem;
     height: var(--header-height);
     background-color: var(--second-color);
+    z-index: 999;
 }
 
 .header>.container {
