@@ -1,10 +1,10 @@
 :root {
     --first-color: #f0da17;
-    --first-alpha-color: rgba(240, 218, 23,0.75);
+    --first-alpha-color: rgba(240, 218, 23, 0.75);
     --second-color: #0a69d6;
-    --second-alpha-color: rgba(10, 105, 214,0.75);
+    --second-alpha-color: rgba(10, 105, 214, 0.75);
     --third-color: #05b5cc;
-    --third-alpha-color: rgba(5, 181, 204,0.75);
+    --third-alpha-color: rgba(5, 181, 204, 0.75);
     --white-color: #fff;
     --white-alpha-color: rgba(255, 255, 255, 0.5);
     --black-color: #000;
@@ -136,7 +136,7 @@ p {
     font-weight: bold;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
 
     .header {
         position: sticky;
@@ -163,10 +163,8 @@ p {
 .menu a {
     color: var(--first-color);
     text-decoration: none;
-    padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    text-align: center;
 }
 
 .btn-menu {
@@ -180,7 +178,7 @@ p {
     fill: var(--first-color);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
     .btn-menu {
         display: none;
     }
@@ -191,6 +189,14 @@ p {
         width: auto;
         opacity: 1;
         pointer-events: auto;
+    }
+
+    .menu a:last-child {
+        padding-right: 0;
+    }
+
+    .menu a:hover {
+        background-color: transparent;
     }
 }
 
