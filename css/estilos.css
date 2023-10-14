@@ -191,6 +191,10 @@ p {
         pointer-events: auto;
     }
 
+    .menu a {
+        padding: o 1rem;
+    }
+
     .menu a:last-child {
         padding-right: 0;
     }
