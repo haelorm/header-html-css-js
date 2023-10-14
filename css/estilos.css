@@ -9,10 +9,10 @@
     --white-alpha-color: rgba(255, 255, 255, 0.5);
     --black-color: #000;
     --black-alpha-color: rgba(0, 0, 0, 0.5);
-    --gray-color: #000;
-    --gray-dark-color: #000;
-    --gray-light-color: #000;
-    --link-color: #5f97eb;
+    --gray-color: #ccc;
+    --gray-dark-color: #666;
+    --gray-light-color: #f3f3f3;
+    --link-color: #5597e4;
     --title-color: #333;
     --text-color: #222;
     --font: "Raleway", sans-serif;
@@ -22,9 +22,9 @@
 
 html {
     box-sizing: border-box;
-    font-family: var(--font);
-    font-size: 16px;
     scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: var(--font);
 }
 
 *,
@@ -35,15 +35,13 @@ html {
 
 body {
     margin: 0;
-    ;
-    color: var(--text-color);
     overflow-x: hidden;
+    color: var(--text-color);
 }
 
 a {
-    margin: 0;
     color: var(--link-color);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-out;
 }
 
 a:hover {
@@ -68,6 +66,7 @@ h3 {
 h4 {
     margin: 0;
     font-size: 1rem;
+
 }
 
 h5 {
@@ -77,7 +76,7 @@ h5 {
 
 h6 {
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 0.7rem;
 }
 
 img {
@@ -89,19 +88,10 @@ p {
     line-height: 1.6;
 }
 
-/* ******UTILIDADES */
+/* UTILITIES */
 
 .none {
     display: none;
-}
-
-.menu.is-active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.section {
-    padding: 2rem 1rem;
 }
 
 .container {
@@ -110,75 +100,88 @@ p {
     max-width: var(--max-width);
 }
 
-/* *****HEADER */
+/* HEADER */
 
 .header {
     position: fixed;
-    bottom: 0;
     left: 0;
+    bottom: 0;
+    background-color: var(--first-color);
     width: 100%;
     padding: 1rem;
     height: var(--header-height);
-    background-color: var(--second-color);
     z-index: 999;
 }
 
-.header>.container {
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo a {
-    color: var(--first-color);
+
+    font-size: 1.5rem;
     text-decoration: none;
-    font-size: 2rem;
     font-weight: bold;
+    color: var(--second-color);
 }
 
 @media screen and (min-width: 1024px) {
-
     .header {
         position: sticky;
         top: 0;
     }
 }
 
-
-/* ******MENU */
+/* MENU */
 
 .menu {
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    bottom: var(--header-height);
-    width: 100%;
-    background-color: var(--second-color);
-    left: 0;
     display: flex;
     flex-direction: column;
+    left: 0;
+    bottom: var(--header-height);
+    position: fixed;
+    background-color: var(--first-color);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s ease;
+
 }
 
 .menu a {
-    color: var(--first-color);
+    padding: 1rem;
     text-decoration: none;
+    color: var(--second-color);
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-.btn-menu {
-    border: 0;
-    outline: thin solid var(--first-color);
-    cursor: pointer;
+.menu a:hover{
+    color: var(--white-color);
     background-color: var(--second-color);
 }
 
-.btn-menu svg {
-    fill: var(--first-color);
+.menu.is-active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-@media screen and (min-width: 1024px) {
+.btn-menu svg {
+    fill: var(--second-color);
+}
+
+.btn-menu {
+    border: 0;
+    outline: thin solid var(--second-color);
+    background-color: var(--first-color);
+    cursor: pointer;
+}
+
+@media screen and (min-width:1024px) {
+
     .btn-menu {
         display: none;
     }
@@ -186,13 +189,9 @@ p {
     .menu {
         display: block;
         position: static;
-        width: auto;
         opacity: 1;
         pointer-events: auto;
-    }
-
-    .menu a {
-        padding: 0 1rem;
+        width: auto;
     }
 
     .menu a:last-child {
@@ -202,22 +201,4 @@ p {
     .menu a:hover {
         background-color: transparent;
     }
-}
-
-
-/* ****CONTENIDOS */
-
-.contenido {
-    margin: 20px;
-    border: 2px solid #000;
-    height: 80vh;
-    position: relative;
-}
-
-.contenido h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-style: italic;
 }
