@@ -1,10 +1,10 @@
 :root {
-    --first-color: #fee440;
-    --first-alpha-color: rgba(254, 228, 64, 0.75);
-    --second-color: #04887c;
-    --second-alpha-color: rgba(0, 187, 249, 0.75);
-    --third-color: #00f5d4;
-    --third-alpha-color: rgba(0, 245, 212, 0.75);
+    --first-color: #f0da17;
+    --first-alpha-color: rgba(240, 218, 23,0.75);
+    --second-color: #0a69d6;
+    --second-alpha-color: rgba(10, 105, 214,0.75);
+    --third-color: #05b5cc;
+    --third-alpha-color: rgba(5, 181, 204,0.75);
     --white-color: #fff;
     --white-alpha-color: rgba(255, 255, 255, 0.5);
     --black-color: #000;

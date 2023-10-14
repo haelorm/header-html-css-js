@@ -1,6 +1,6 @@
-# HEADER WEB
+# Header Web
 
-## Header web con Html, CSS y Javascript.
+## Html, CSS y Javascript.
 
-- [haelorm.github.io/header-html-css-js](https://haelorm.github.io/header-html-css-js)
+- [Ver aquí](https://haelorm.github.io/header-html-css-js)
 
